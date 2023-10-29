@@ -1,0 +1,103 @@
+.background {
+  background: #060606;
+  background-image: url('/src/assets/img/background-img-min.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.container-nav {
+  display: flex;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 75px 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.preorder-button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 60px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  font-size: 20px;
+  font-family: 'satochi Light', sans-serif;
+}
+
+.content {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 75px;
+  font-family: 'satochi Light', sans-serif;
+  line-height: 1.4;
+}
+
+.description-text {
+  margin: 20px 0;
+  font-family: 'satochi Light', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.scroll-content {
+  font-family: 'Satoshi Light', sans-serif;
+  opacity: 0;
+  transform: translate3d(0, 100px, 0) scale(0.8);
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.scroll-content.show {
+  padding-top: 1.5rem;
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.buttons {
+  margin: 40px 0;
+}
+
+.all-buttons {
+  display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+  font-family: 'Satoshi Light', sans-serif;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.description {
+  font-family: 'Satoshi Light', sans-serif;
+  font-size: 20px;
+  transform-style: preserve-3d;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: all 1s ease;
+}
+
+.description.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

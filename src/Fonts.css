@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+/* Définition de la police personnalisée pour Satoshi-Light */
+
+@font-face {
+    font-family: 'Satoshi Light';
+    src: url('/src/assets/fonts/satochi/Satoshi-Light.ttf') format('truetype'),
+         url('/src/assets/fonts/satochi/Satoshi-Light.woff') format('woff'),
+         url('/src/assets/fonts/satochi/Satoshi-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+=======
+/* Définition de la police personnalisée pour Satoshi-Light */
+
+@font-face {
+    font-family: 'Satoshi Light';
+    src: url('/src/assets/fonts/satochi/Satoshi-Light.ttf') format('truetype'),
+         url('/src/assets/fonts/satochi/Satoshi-Light.woff') format('woff'),
+         url('/src/assets/fonts/satochi/Satoshi-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+>>>>>>> 60cc383e163cf1ba39672e5c9e60f2dead5e91ed
+  
