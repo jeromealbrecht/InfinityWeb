@@ -48,9 +48,20 @@
 
 .description-text {
   margin: 20px 0;
-  font-family: 'satochi Light', sans-serif;
+  font-family: 'Lato Regular', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+.description-text-small {
+  margin-top: 1rem;
+  width: 71%;
+  text-align: justify;
+  font-family: 'satochi Light', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4rem;
+  letter-spacing: 0.5px;
 }
 
 .scroll-content {
@@ -58,7 +69,7 @@
   opacity: 0;
   transform: translate3d(0, 100px, 0) scale(0.8);
   transform-style: preserve-3d;
-  transition: all 1s ease;
+  transition: all .3s ease;
 }
 
 .scroll-content.show {
@@ -90,14 +101,86 @@
 
 .description {
   font-family: 'Satoshi Light', sans-serif;
-  font-size: 20px;
+  font-size: 35px;
   transform-style: preserve-3d;
   opacity: 0;
   transform: translate3d(0, 50px, 0);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .description.show {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+
+/* Transitions image */
+.description-transition {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+
+.image-w {
+  width: 50%;
+  justify-content: center;
+}
+
+.image-transition {
+  background-image: url('/src/assets/img/Couleurdeson-min.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 680px; /* Réduisez de 15 % la largeur d'origine (800px - 15%) */
+  height: 386.75px;
+  max-width: 100%; /* Ajustez la largeur en pourcentage */
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+  box-shadow: -10px 10px 0px #154C82, -20px 20px 0px #192126
+}
+
+/* Utilisation des clés d'animation */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.image-transition.show {
+  cursor: pointer;
+  border-radius: 18px;
+  position: relative;
+  right: 3rem;
+  animation: slideFromRight 1s ease 0s forwards;
+}
+
+.image-transition.show:hover {
+  opacity: 0.9;
+  transform: translateX(0) rotateY(10deg) /* Réinitialisez la rotation au survol */
+}
+
+.mirror-image {
+  display: flex;
+}
+
+.mirror-image.show .description-transition {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease; /* Décalage pour synchroniser la transition */
+   /* Décalage pour synchroniser la transition */
+}
+
+.mirror-image.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s ease; /* Décalage pour synchroniser la transition */
+}
+
+.lh {
+  line-height: 2.4rem;
 }
