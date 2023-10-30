@@ -73,16 +73,12 @@ const App = () => {
         <div className={`scroll-content show`}>
           <div className={`mirror-image ${showMirrorImage ? 'show' : ''}`}>
             <div className="description-transition">
-              <p className='description-text lh'>
-                Notre Expertise Web <br /> au service de Couleur de Son
-              </p>
-
-              <p className='description-text-small'>
-              Le site web Couleur de Son est bien plus qu'une simple vitrine. <br /><br />
+              <h3>
+              Le site web Couleur de Son est bien plus qu'une simple vitrine,
               Il est le reflet de son image, de leur engagement auprès des clients. <br /><br />
-              Notre expertise web a permis de mettre en avant la qualité des services proposés, <br /><br />
+              Notre expertise web a permis de mettre en avant la qualité des services proposés, <br />
               de faciliter la navigation des visiteurs et d'améliorer la visibilité en ligne.
-              </p>
+              </h3>
             </div>
             <div className='image-w'>
               <div className={`image-transition ${showMirrorImage ? 'show' : ''}`}></div>
