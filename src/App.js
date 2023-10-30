@@ -81,9 +81,8 @@ const App = () => {
               </h3>
             </div>
             <div className='image-w'>
-              <div className={`image-transition ${showMirrorImage ? 'show' : ''}`}></div>
+              <a href="https://www.couleurdeson.fr/" className={`image-transition ${showMirrorImage ? 'show' : ''}`}></a>
             </div>
-
           </div>
         </div>
       )}
