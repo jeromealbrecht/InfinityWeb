@@ -6,6 +6,11 @@ import './AMedia-queries.css';
 const App = () => {
   const [showContent, setShowContent] = useState(false);
   const [showMirrorImage, setShowMirrorImage] = useState(false);
+  const [showMirrorNext, setShowMirrorNext] = useState(false);
+
+  const handleShowMirrorNext = () => {
+    setShowMirrorNext(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,34 +66,40 @@ const App = () => {
             </div>
           </div>
 
-          <div className="description">
-            YOLO is a company that offers the latest research when it comes to carbon
-            fiber composites. We use the best technology in the world, and our products
-            are designed to provide the most strength, durability, and comfort possible.
+          <div className={`description ${showContent && 'show'}`}>
+            <div className='description-company'>
+              <h3>
+                YOLO is a company that offers the latest research when it comes to carbon
+                fiber composites. We use the best technology in the world, and our products
+                are designed to provide the most strength, durability, and comfort possible.
+              </h3>
+            </div>
           </div>
         </div>
 
         {/* Mirror Image */}
-        {showMirrorImage && (
-        <div className={`scroll-content show`}>
-          <div className={`mirror-image ${showMirrorImage ? 'show' : ''}`}>
-            <div className="description-transition">
-              <h3>
-              Le site web Couleur de Son est bien plus qu'une simple vitrine,
-              Il est le reflet de son image, de leur engagement auprès des clients. <br /><br />
-              Notre expertise web a permis de mettre en avant la qualité des services proposés, <br />
-              de faciliter la navigation des visiteurs et d'améliorer la visibilité en ligne.
-              </h3>
-            </div>
-            <div className='image-w'>
-              <div className={`image-transition ${showMirrorImage ? 'show' : ''}`}>
-                <a href="https://www.couleurdeson.fr"></a>
+
+      {showMirrorImage && (
+         <div className="scroll-content show">
+            <div className="mirror-image">
+              <div className="description-transition">
+                <h3>
+                  Le site web Couleur de Son est bien plus qu'une simple vitrine,
+                  Il est le reflet de son image, de leur engagement auprès des clients. <br /><br />
+                  Notre expertise web a permis de mettre en avant la qualité des services proposés, <br />
+                  de faciliter la navigation des visiteurs et d'améliorer la visibilité en ligne.
+                </h3>
+              </div>
+              <div className='image-w'>
+                <div className={`image-transition ${showMirrorImage ? 'show' : ''}`}>
+                  <a href="https://www.couleurdeson.fr"></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       )}
-      </div>
+    </div>
+      
     </div>
   );
 };
