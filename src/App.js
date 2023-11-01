@@ -6,11 +6,6 @@ import './AMedia-queries.css';
 const App = () => {
   const [showContent, setShowContent] = useState(false);
   const [showMirrorImage, setShowMirrorImage] = useState(false);
-  const [showMirrorNext, setShowMirrorNext] = useState(false);
-
-  const handleShowMirrorNext = () => {
-    setShowMirrorNext(true);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,11 +62,11 @@ const App = () => {
           </div>
 
           <div className={`description ${showContent && 'show'}`}>
-            <div className='description-company'>
+            <div className='description-company mt2'>
               <h3>
-                YOLO is a company that offers the latest research when it comes to carbon
-                fiber composites. We use the best technology in the world, and our products
-                are designed to provide the most strength, durability, and comfort possible.
+              YOLO, c'est votre partenaire pour propulser votre entreprise dans le monde du digital. 
+              Nous sommes experts en utilisant les dernières technologies pour mettre en avant votre marque et vous offrir une présence en ligne forte, 
+              durable et confortable.
               </h3>
             </div>
           </div>
@@ -81,18 +76,18 @@ const App = () => {
 
       {showMirrorImage && (
          <div className="scroll-content show">
-            <div className="mirror-image">
+            <div className="mirror-image mt4">
               <div className="description-transition">
-                <h3>
+                <h4>
                   Le site web Couleur de Son est bien plus qu'une simple vitrine,
                   Il est le reflet de son image, de leur engagement auprès des clients. <br /><br />
                   Notre expertise web a permis de mettre en avant la qualité des services proposés, <br />
                   de faciliter la navigation des visiteurs et d'améliorer la visibilité en ligne.
-                </h3>
+                </h4>
               </div>
               <div className='image-w'>
                 <div className={`image-transition ${showMirrorImage ? 'show' : ''}`}>
-                  <a href="https://www.couleurdeson.fr"></a>
+                  <a href="https://www.couleurdeson.fr">Couleur de son</a>
                 </div>
               </div>
             </div>
